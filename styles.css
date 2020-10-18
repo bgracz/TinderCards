@@ -1,0 +1,164 @@
+@media (min-width: 500px) {
+
+  .postCard {
+    display: none;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 20px 30px 30px rgba(0,0,0,0.2);
+    color: #fff;
+    padding: 20px;
+    width: 360px;
+    height: 360px;
+    top: 50px;
+    left: 50px;
+    position: absolute;
+    cursor: hand;
+  }
+
+  #listApp {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 25px;
+  }
+  #listAppHidden {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #A4A4A4;
+    text-decoration: line-through;
+  }
+
+  .button {
+    width: 30%;
+  }
+
+  .button:hover {
+    opacity: 1;
+  }
+
+}
+
+@media print {
+
+  .button, .footer {
+    visibility: hidden;
+  }
+
+  #listAppHidden {
+    visibility: hidden;
+  }
+
+}
+
+h3 {
+  text-align: center;
+  color: #A4A4A4;
+  opacity: 0.5;
+}
+
+#container {
+  width: 500px;
+  margin: auto !important;
+  display: block;
+  height: 500px;
+  position: relative;
+  list-style-type: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#listApp {
+  width: 90%;
+  margin-left: 10px;
+  margin-right: 10px;
+  line-height: 25px;
+}
+#listAppHidden {
+  width: 90%;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #A4A4A4;
+  text-decoration: line-through;
+}
+.postCard {
+  display: none;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 20px 30px 30px rgba(0,0,0,0.2);
+  color: #fff;
+  padding: 20px;
+  width: 360px;
+  height: 360px;
+  top: 50px;
+  position: absolute;
+  cursor: hand;
+}
+.rotate-left {
+  transform: rotate(40deg) scale(0.1);
+  transition: 1s;
+  margin-left: 400px;
+  cursor: e-resize;
+  opacity: 0;
+  z-index: 10;
+}
+.rotate-right {
+  transform: rotate(-40deg) scale(0.1);
+  transition: 1s;
+  opacity: 0;
+  margin-left: -400px;
+  cursor: w-resize;
+  z-index: 10;
+}
+.cardContent {
+  text-align: center;
+  color: black;
+  font-size: 1.2rem;
+  line-height: 25px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+  width: 340px;
+  height: 340px;
+  display: block;
+  margin-top: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button {
+  font-family: 'Raleway', sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  opacity: 0.7;
+}
+
+.button:hover {
+  opacity: 1;
+}
+
+.footer {
+  text-align: center;
+  padding-top: 30px;
+  font-size: 12px;
+  color: #A4A4A4;
+  opacity: 0.8;
+}
+
+a {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#popUpText {
+  opacity: 1;
+  color: black;
+  font-size: 14px;
+}
+
+#button {
+  margin-bottom: 30px;
+}

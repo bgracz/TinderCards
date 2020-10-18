@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Make list form carousel</title>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css">
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div id="container" class="container">
+    <div id="mainDiv" class="row">
+      <script src="dynamicCard.js" charset="utf-8"></script>
+    </div>
+  </div>
+  <div id="listApp"></div>
+  <div id="listAppHidden"></div>
+  <h3>0%</h3>
+  <div class="button">
+    <label>Pokaż odrzucone <input type="checkbox" id="ch" value=""></label>
+    <button id="button" type="button" name="button">Restart</button>
+    <button id="pdfButton" type="button" name="button" onclick="saveDiv('pdf','Title')">Save as *.pdf</button>
+    <button id="printButton" type="button" name="button" onclick="window.print()">Print</button>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>
