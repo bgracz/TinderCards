@@ -1,6 +1,6 @@
 var doc = new jsPDF();
-var sins = [];
-var notSins = [];
+var yes = [];
+var no = [];
 var totalList = ($("#mainDiv div").length / 2);
 var progressBar = 0;
 var firstMove = '';
@@ -18,14 +18,14 @@ $(document).ready(function() {
     $('.postCard').find('.status').remove();
 
     var cardRight = $(this).text();
-    var nowyObiekt = sins.push(cardRight);
-    console.log(sins);
+    var nowyObiekt = yes.push(cardRight);
+    console.log(yes);
 
     changeProgress();
 
     if (progressBar == 1){
       firstMove = 'right';
-      sins.shift();
+      yes.shift();
     } else {
       firstMove = 'left';
     };
@@ -45,14 +45,14 @@ $(document).ready(function() {
     $('.postCard').find('.status').remove();
 
     var cardLeft = $(this).text();
-    var nowyObiektUkryty = notSins.push(cardLeft);
-    console.log(notSins);
+    var nowyObiektUkryty = no.push(cardLeft);
+    console.log(no);
 
     changeProgress();
 
     if (progressBar == 1){
       firstMove = 'left';
-      notSins.shift();
+      no.shift();
     } else {
       firstMove = 'right';
     };
@@ -80,9 +80,9 @@ function list() {
   $('#container').hide();
 
   var list = document.createElement('ul');
-  sins.forEach(function(sins) {
+  yes.forEach(function(yes) {
     var li = document.createElement('li');
-    li.textContent = sins;
+    li.textContent = yes;
     list.appendChild(li);
   });
 
@@ -108,9 +108,9 @@ $('#ch').click(function() {
 function hiddenList() {
 
   var hiddenList = document.createElement('ul');
-  notSins.forEach(function(notSins) {
+  no.forEach(function(no) {
     var li2 = document.createElement('li');
-    li2.textContent = notSins;
+    li2.textContent = no;
     hiddenList.appendChild(li2);
   });
 
@@ -121,7 +121,7 @@ function hiddenList() {
 var today = new Date();
 function saveDiv(divId, title) {
  doc.fromHTML(document.getElementById('listApp').innerHTML, 20, 10);
- doc.save('rachunek_sumienia_' + today.getDate() + '-' + today.getMonth() + '-' + today.getFullYear() +'.pdf');
+ doc.save('your_list_' + today.getDate() + '-' + today.getMonth() + '-' + today.getFullYear() +'.pdf');
 };
 
 $("#button").click(function() {

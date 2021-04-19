@@ -1,9 +1,9 @@
-var JsonData = '[{"title":"Item one"}, {"title":"Item two"}, {"title":"Item three"}]';
+var JsonData = '[{"title":"Swipe right to add. Move left to remove."}, {"title":"Item one"}, {"title":"Item two"}, {"title":"Item three"}, {"title":"Item four"}, {"title":"Item five"}]';
 
-var obj = JSON.parse( JsonData );
+var obj = JSON.parse(JsonData);
 
 var tmp = '';
-$.each( obj, function( key, value ) {
+$.each( obj, function(key, value) {
   tmp += '<div class="postCard">';
   tmp += '    <div class="cardContent" style="display: block;">';
   tmp +=          value.title;
